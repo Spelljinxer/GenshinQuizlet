@@ -20,7 +20,7 @@ Install the requirements onto the virtual environment. (must be in the same dire
 pip install -r requirements.txt
 ```
 
-To run the application you need to be in the same directory as visitor_app.py. The --host parameter allows you to run the application on your local network for testing on mobile devices.<br/>
+To run the application you need to be in the same directory as genshin_quizlet.py. The --host parameter allows you to run the application on your local network for testing on mobile devices.<br/>
 ```
 flask run
 flask run --host=0.0.0.0
