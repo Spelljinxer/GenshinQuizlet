@@ -1,0 +1,2 @@
+FLASK_APP=genshin_quizlet.py
+FLASK_ENV=development
