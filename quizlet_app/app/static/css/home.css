@@ -11,8 +11,16 @@
     --main-font-family: 'Montserrat', sans-serif;
     /* --main-primary-color: #483D8B;  */
 }
-
-body { 
-    /* background-color: ghostwhite; */
-    /* margin: 0; */
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* TODO make this only affect the background-image */
+body{ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: 1;
+    opacity: 0.3;
 }
