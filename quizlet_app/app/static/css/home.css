@@ -19,12 +19,42 @@ html,body{
     overflow-x: hidden;
 }
 
-/* TODO make this only affect the background-image */
 .body{ 
+    min-height:100%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    -moz-background-size: cover;
 }
 
-h1{
-    color: red;
+/* --------------- menu item --------------------------- */
+.nav div{
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.55s;
+    white-space: nowrap;
 }
+
+.nav{
+    width: 30px;
+    display: block;
+    margin: 1em 0 0 1em;
+    padding: 30px;
+}
+
+.one{
+    width: 30px;
+}
+.two{
+    width: 20px;
+}
+.one{
+    width: 25px;
+}
+
+.nav:hover div{
+    width: 30px;
+}
+

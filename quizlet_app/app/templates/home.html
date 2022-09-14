@@ -12,13 +12,18 @@
         <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
     </head>
 <body>
-    <h1>Placeholder Header</h1>
+    <a href="#" class="nav">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </a>
+    
 </body>
 <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 <script type="text/javascript">
-    var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.png', 'bg-7.png'];
-    $('body').css({
-        'background-image': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ')',
-    });
+    // var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.png', 'bg-7.png'];
+    // $('body').css({
+    //     'background-image': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ')',
+    // });
   </script>
 </html>
