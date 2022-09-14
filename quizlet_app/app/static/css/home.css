@@ -15,12 +15,16 @@ html,body{
     height: 100%;
     padding: 0;
     margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
 /* TODO make this only affect the background-image */
-body{ 
+.body{ 
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 1;
-    z-index: 1;
-    opacity: 0.3;
+}
+
+h1{
+    color: red;
 }
