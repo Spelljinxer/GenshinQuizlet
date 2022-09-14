@@ -28,18 +28,22 @@ html,body{
 }
 
 /* --------------- menu item --------------------------- */
-.nav div{
+.nav section{
     height: 4px;
     background-color: white;
     margin: 5px 0;
     border-radius: 25px;
     transition: 0.55s;
     white-space: nowrap;
+    cursor: pointer;
 }
 
+.hoverme:hover{
+    cursor: pointer;
+}
 .nav{
     width: 30px;
-    display: block;
+    display: inline-block;
     margin: 1em 0 0 1em;
     padding: 30px;
 }
@@ -50,11 +54,58 @@ html,body{
 .two{
     width: 20px;
 }
-.one{
+.three{
     width: 25px;
 }
 
-.nav:hover div{
+.nav:hover section{
     width: 30px;
+    cursor: pointer;
 }
 
+/* dropdown content of menu */
+/* .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+} */
+.dropdown-content{
+    display:none;
+    transition: 150ms ease-in-out;
+    position: absolute;
+    left: 0;
+    /* background-color: red; */
+}
+
+.dropdown-content ul li{
+    padding: 0;
+}
+.dropdown-content li {
+    display: block;
+    clear: left;
+}
+.dropdown-content ul li{
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    font-family: var(--main-font-family);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dropdown-content ul li a{
+    text-decoration: none;
+    color: white;
+    float: left;
+    left: 0;
+    padding: 5px 5px;
+}
