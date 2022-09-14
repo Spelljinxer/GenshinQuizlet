@@ -12,15 +12,22 @@
         <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
     </head>
 <body>
-    <h1>Placeholder Header</h1>
+    <div class="nav" onclick="myFunction(this)" >
+        <div class="hoverme">
+            <section class="one"></section>
+            <section class="two"></section>
+            <section class="three"></section>
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+            <ul>
+                <li><a href="">Leaderboards</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Credits</a></li>
+            </ul>
+        </div>
+
+    </div>
+    
 </body>
 <script src="{{ url_for('static', filename='js/home.js') }}"></script>
-<script type="text/javascript">
-    var images = ['bg-1.jpg', 'bg-2.jpg', 'bg-3.png', 'bg-4.jpg'];
-    $('body').css({
-        'background': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ')',
-        'background-size' : 'cover',
-        'opacity' : '0.2',
-    });
-  </script>
 </html>
