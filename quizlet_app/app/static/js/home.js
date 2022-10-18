@@ -8,7 +8,6 @@ var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.
         'webkit-background-size': 'cover',
         'moz-background-size': 'cover',
         'o-background-size': 'cover',
-        
     });
 
 
