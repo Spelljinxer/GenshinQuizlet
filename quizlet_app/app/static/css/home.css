@@ -15,17 +15,12 @@ html,body{
     height: 100%;
     padding: 0;
     margin: 0;
+    width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
+    font-family: var(--main-font-family);
 }
 
-.body{ 
-    min-height:100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-background-size: cover;
-}
 
 /* --------------- menu item --------------------------- */
 .nav section{
@@ -108,4 +103,42 @@ html,body{
     float: left;
     left: 0;
     padding: 5px 5px;
+}
+
+.dropdown-content ul li a:hover{
+    color: #483D8B;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* --------------- main body --------------------------- */
+
+.main-body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: relative;
+}
+
+/* place the main-body-content at the top center of the main-body div */
+.main-body-content{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--main-font-family);
+    color: white;
+    font-weight: 500;
+    /* background-color: blue; */
+}
+
+.main-body-content-title{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
