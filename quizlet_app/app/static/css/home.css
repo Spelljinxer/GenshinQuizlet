@@ -124,6 +124,66 @@ html,body{
     position: relative;
     margin: 0 auto;
     top: 15%;
+    animation: fadein-down 1s;
+    -webkit-animation: fadein-down 1s;
+    -moz-animation: fadein-down 1s;
+    -o-animation: fadein-down 1s;
+    -ms-animation: fadein-down 1s; 
+}
+
+@keyframes fadein-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes fadein-down{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadein-down{
+    0%{
+        opacity: 0;
+        -moz-transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes fadein-down{
+    0%{
+        opacity: 0;
+        -o-transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+
+@-ms-keyframes fadein-down{
+    0%{
+        opacity: 0;
+        -ms-transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        -ms-transform: translateY(0);
+    }
 }
 
 /* place the main-body-content at the top center of the main-body div */
