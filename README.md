@@ -4,8 +4,8 @@
 Current WIP random self-project (probably will never be completed)
 
 ## Developers
-@Spelljinxer Front End
-@Scaketh Back End
+[Spelljinxer](https://github.com/Spelljinxer) Front-End <br>
+[Sckaeth](https://github.com/Sckaeth) Back-End
 
 ## Installation
 Install the virtualenv package if it is not already installed.<br/>
