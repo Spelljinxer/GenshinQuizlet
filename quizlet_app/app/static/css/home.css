@@ -115,7 +115,7 @@ html,body{
 
 .main-body{
     height: 20%;
-    width: 20%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,11 +124,7 @@ html,body{
     position: relative;
     margin: 0 auto;
     top: 15%;
-    animation: fadein-down 1s;
-    -webkit-animation: fadein-down 1s;
-    -moz-animation: fadein-down 1s;
-    -o-animation: fadein-down 1s;
-    -ms-animation: fadein-down 1s; 
+
 }
 
 @keyframes fadein-down{
@@ -201,4 +197,60 @@ html,body{
 .main-body-content-title{
     font-size: 1rem;
     font-weight: 500;
+    animation: fadein-down 1s;
+    -webkit-animation: fadein-down 1s;
+    -moz-animation: fadein-down 1s;
+    -o-animation: fadein-down 1s;
+    -ms-animation: fadein-down 1s; 
+}
+
+/* ---------------------- INTRO TEXT -----------------------   */
+
+.container{
+    margin: 0 auto; 
+    /* background-color: blue; */
+    width: 100%;
+    top: 65%;
+    position: relative;
+}
+
+.container p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: var(--main-font-family);
+    color: white;
+    font-weight: 500;
+    /* background-color: blue; */
+}
+
+@media screen and (max-width: 340px) {
+    .container p{
+        font-size: 0.8rem;
+    }
+    .container {
+        top: 100%;
+    }
+}
+
+.container p span.typed-text {
+    font-weight: normal;
+    color: rgb(252, 215, 8);
+}
+.container p span.cursor {
+    display: inline-block;
+    background-color: rgb(238, 227, 227);
+    margin-left: 0.1rem;
+    width: 6px;
+    animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+    animation: none;
+}
+@keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
 }
