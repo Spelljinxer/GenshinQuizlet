@@ -243,14 +243,50 @@ html,body{
     margin-left: 0.1rem;
     width: 6px;
     animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    -o-animation: blink 1s infinite;
+    -ms-animation: blink 1s infinite;
 }
 .container p span.cursor.typing {
     animation: none;
 }
 @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
+    0%  { background-color: rgb(238, 227, 227); }
+    49% { background-color: rgb(238, 227, 227); }
     50% { background-color: transparent; }
     99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
+    100%  { background-color: rgb(238, 227, 227); }
+}
+
+@-webkit-keyframes blink {
+    0%  { background-color: rgb(238, 227, 227); }
+    49% { background-color: rgb(238, 227, 227); }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: rgb(238, 227, 227); }
+}
+
+@-moz-keyframes blink {
+    0%  { background-color: rgb(238, 227, 227); }
+    49% { background-color: rgb(238, 227, 227); }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: rgb(238, 227, 227); }
+}
+
+@-o-keyframes blink {
+    0%  { background-color: rgb(238, 227, 227); }
+    49% { background-color: rgb(238, 227, 227); }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: rgb(238, 227, 227); }
+}
+
+@-ms-keyframes blink {
+    0%  { background-color: rgb(238, 227, 227); }
+    49% { background-color: rgb(238, 227, 227); }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: rgb(238, 227, 227); }
 }
