@@ -14,7 +14,9 @@
 <body>
     <div class="nav-bar">
         <div class="icon">
-            <img class="paimon" src="{{ url_for('static', filename='assets/paimon-icon.png') }}" alt="icon">
+            <a href="{{ url_for('index') }}">
+                <img class="paimon" src="{{ url_for('static', filename='assets/paimon-icon.png') }}" alt="icon">
+            </a>
         </div>
     </div>
     <div class="nav" onclick="myFunction(this)" >
