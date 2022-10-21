@@ -69,3 +69,14 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+
+var elements = $('.modal-overlay, .modal');
+
+$('.credits').click(function(){
+    elements.addClass('active');
+});
+
+$('.close-modal').click(function(){
+    elements.removeClass('active');
+});
