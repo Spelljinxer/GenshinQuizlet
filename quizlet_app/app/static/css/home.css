@@ -39,7 +39,7 @@ html,body{
 .nav{
     width: 30px;
     display: inline-block;
-    margin: 1em 0 0 1em;
+    margin: 1.2em 0 0 1em;
     padding: 30px;
 }
 
@@ -203,6 +203,55 @@ html,body{
     -o-animation: fadein-down 1s;
     -ms-animation: fadein-down 1s; 
 }
+/* ---------------------- ICON -----------------------   */
+.nav-bar{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* background-color: #483D8B; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    z-index: 1;
+}
+
+.icon{
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    margin: 0 1em;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.paimon{
+    width: 75px;
+    animation: float 6s ease-in-out infinite;
+    box-sizing: border-box;
+    border: 2px white solid;  
+    border-radius: 50%;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-15px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 
 /* ---------------------- INTRO TEXT -----------------------   */
 
@@ -212,6 +261,66 @@ html,body{
     width: 100%;
     top: 65%;
     position: relative;
+    animation: fadein-left 1s;
+    -webkit-animation: fadein-left 1s;
+    -moz-animation: fadein-left 1s;
+    -o-animation: fadein-left 1s;
+    -ms-animation: fadein-left 1s;
+}
+
+@keyframes fadein-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fadein-left{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadein-left{
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadein-left{
+    0%{
+        opacity: 0;
+        -o-transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@-ms-keyframes fadein-left{
+    0%{
+        opacity: 0;
+        -ms-transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        -ms-transform: translateX(0);
+    }
 }
 
 .container p{
