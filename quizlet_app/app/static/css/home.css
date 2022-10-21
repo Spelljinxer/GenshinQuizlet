@@ -57,27 +57,11 @@ html,body{
     width: 30px;
     cursor: pointer;
 }
-
-/* dropdown content of menu */
-/* .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-} */
 .dropdown-content{
     display:none;
     transition: 150ms ease-in-out;
     position: absolute;
     left: 0;
-    /* background-color: red; */
 }
 
 .dropdown-content ul li{
@@ -89,7 +73,7 @@ html,body{
 }
 .dropdown-content ul li{
     list-style: none;
-    padding: 0;
+    padding: 3px 3px;
     font-size: 20px;
     font-family: var(--main-font-family);
     color: white;
@@ -105,7 +89,7 @@ html,body{
     padding: 5px 5px;
 }
 
-.dropdown-content a:hover{
+.dropdown-content li:hover{
     color: #483D8B;
     background-color: white;
     border-radius: 5px;
@@ -398,4 +382,124 @@ html,body{
     50% { background-color: transparent; }
     99% { background-color: transparent; }
     100%  { background-color: rgb(238, 227, 227); }
+}
+
+
+button {
+    background-color: #0d52e9;
+    position: relative;
+    color: #fff;
+    border: none;
+    padding: 1.25em 2em;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+}
+button:hover {
+    background: #0c4ddb;
+}
+button:focus {
+    outline: none;
+}
+/** * Overlay * -- only show for tablet and up */
+@media only screen and (min-width: 40em) {
+    .modal-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        backface-visibility: hidden;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+   }
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+   }
+}
+/** * Modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 600px;
+    max-width: 75rem;
+    min-height: 20rem;
+    padding: 1rem;
+    border-radius: 3px;
+    opacity: 0;
+    overflow-y: auto;
+    visibility: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    transform: scale(1.2);
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.modal .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 15px;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s;
+}
+.modal .close-modal svg {
+    width: 1.75em;
+    height: 1.75em;
+}
+.modal .modal-content {
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s;
+}
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.modal.active .modal-content {
+    opacity: 1;
+}
+.modal.active .close-modal {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+/** * Mobile styling */
+@media only screen and (max-width: 39.9375em) {
+    h1 {
+        font-size: 1.5rem;
+   }
+    .modal {
+        position: fixed;
+        /* top: 50%;
+        left: 0; */
+        width: 100%;
+        height: 50%;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        transform: scale(1.1);
+        padding: 0 !important;
+        z-index: 5;
+   }
+    .close-modal {
+        right: 20px !important;
+    
+   }
 }

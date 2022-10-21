@@ -1,5 +1,10 @@
 
 
+/**
+ * Creates a randomised background image
+ * TODO: Make it fit to screen (!!)
+ * TODO: Add more images (!)
+ */
 var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.png'];
     $('body').css({
         'background-image': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ')',
@@ -10,15 +15,20 @@ var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.
         'o-background-size': 'cover',
     });
 
+/**
+ * Creates the drop down menu
+ */
+function myFunction(x) {
+    x.classList.toggle("change");
+    
+    document.getElementById('myDropdown').style.display = document.getElementById('myDropdown').style.display =='block' ?   'none' : 'block';
+}
 
-    function myFunction(x) {
-        x.classList.toggle("change");
-        
-        document.getElementById('myDropdown').style.display = document.getElementById('myDropdown').style.display =='block' ?   'none' : 'block';
-    }
-
-
-    const typedTextSpan = document.querySelector(".typed-text");
+/**
+ * Typing effect on home page
+ * TODO: Add more text? (!)
+ */
+const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = ["Characters", "Artifacts", "Weapons", "Lore"];
@@ -58,4 +68,15 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+var elements = $('.modal-overlay, .modal');
+
+$('.credits').click(function(){
+    elements.addClass('active');
+});
+
+$('.close-modal').click(function(){
+    elements.removeClass('active');
 });
