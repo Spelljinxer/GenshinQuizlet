@@ -12,6 +12,11 @@
         <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
     </head>
 <body>
+    <div class="nav-bar">
+        <div class="icon">
+            <img class="paimon" src="{{ url_for('static', filename='assets/paimon-icon.png') }}" alt="icon">
+        </div>
+    </div>
     <div class="nav" onclick="myFunction(this)" >
         <div class="hoverme">
             <section class="one"></section>
@@ -33,6 +38,7 @@
                 <h1>Genshin<br>Quizlet</h1>
             </div>
         </div>
+        
         <div class="container">
             <p>Test your knowledge on GI's <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
           </div>

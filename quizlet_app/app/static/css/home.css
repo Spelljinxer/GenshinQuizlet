@@ -39,7 +39,7 @@ html,body{
 .nav{
     width: 30px;
     display: inline-block;
-    margin: 1em 0 0 1em;
+    margin: 1.2em 0 0 1em;
     padding: 30px;
 }
 
@@ -202,6 +202,55 @@ html,body{
     -moz-animation: fadein-down 1s;
     -o-animation: fadein-down 1s;
     -ms-animation: fadein-down 1s; 
+}
+/* ---------------------- ICON -----------------------   */
+.nav-bar{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* background-color: #483D8B; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    z-index: 1;
+}
+
+.icon{
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    margin: 0 1em;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.paimon{
+    width: 75px;
+    animation: float 6s ease-in-out infinite;
+    box-sizing: border-box;
+    border: 2px white solid;  
+    border-radius: 50%;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-15px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 /* ---------------------- INTRO TEXT -----------------------   */
