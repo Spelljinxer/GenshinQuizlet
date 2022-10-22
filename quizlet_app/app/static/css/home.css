@@ -493,13 +493,12 @@ html,body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    animation: fadein-bottom 1s ease-in-out;
-    -webkit-animation: fadein-bottom 1s ease-in-out;
-    -moz-animation: fadein-bottom 1s ease-in-out;
-    -o-animation: fadein-bottom 1s ease-in-out;
-    -ms-animation: fadein-bottom 1s ease-in-out;
+    animation: fadein-bottom 1s;
+    -webkit-animation: fadein-bottom 1s;
+    -moz-animation: fadein-bottom 1s;
+    -o-animation: fadein-bottom 1s;
+    -ms-animation: fadein-bottom 1s;
 }
-
 @keyframes fadein-bottom {
     0% {
         opacity: 0;
