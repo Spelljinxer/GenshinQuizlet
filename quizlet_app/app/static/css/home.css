@@ -487,12 +487,72 @@ html,body{
 .play-button{
     position: relative;
     /* width: 100px; */
-    top: 95%;
-    width: 50%;
+    top: 110%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    animation: fadein-bottom 1s ease-in-out;
+    -webkit-animation: fadein-bottom 1s ease-in-out;
+    -moz-animation: fadein-bottom 1s ease-in-out;
+    -o-animation: fadein-bottom 1s ease-in-out;
+    -ms-animation: fadein-bottom 1s ease-in-out;
+}
+
+@keyframes fadein-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes fadein-bottom {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadein-bottom {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes fadein-bottom {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+
+@-ms-keyframes fadein-bottom {
+    0% {
+        opacity: 0;
+        -ms-transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: translateY(0);
+    }
 }
 
 .play-button a{
@@ -511,10 +571,16 @@ html,body{
     font-weight: 600;
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
-}
+} 
 
 .play-button button:hover{
     background-color: rgb(252, 215, 8);
     color: black;
     transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px){
+    .play-button{
+        width: 100%;
+    }
 }
