@@ -1,0 +1,26 @@
+im gonna mess with the html here lol<br><br>
+
+{% for question in questions %}
+    Question {{loop.index}}: {{question.text}}<br>
+    The topic is {{topics[question.topic - 1]}}<br>
+    The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
+    <script>
+        function hi(shit) {
+            let listan = JSON.parse(shit);
+            for (let i = 0; i < listan.length; i++) {
+                alert(listan[i]);
+            }
+        }
+    </script>
+    The image for this question is:
+    {% if question.image != 1 %}
+    (raiden's cool face)<br>
+    <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+    {% else %}
+     nothing.
+    {% endif %}
+    <br><br>
+    <button onclick="hi('{{ question.answers }}')">print that list i guess</button><br>
+
+    <br>
+{% endfor %}
