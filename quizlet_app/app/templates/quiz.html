@@ -1,26 +1,37 @@
-im gonna mess with the html here lol<br><br>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Genshin Quizlet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    im gonna mess with the html here lol<br><br>
 
-{% for question in questions %}
-    Question {{loop.index}}: {{question.text}}<br>
-    The topic is {{topics[question.topic - 1]}}<br>
-    The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
-    <script>
-        function hi(shit) {
-            let listan = JSON.parse(shit);
-            for (let i = 0; i < listan.length; i++) {
-                alert(listan[i]);
-            }
-        }
-    </script>
-    The image for this question is:
-    {% if question.image != 1 %}
-    (raiden's cool face)<br>
-    <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
-    {% else %}
-     nothing.
-    {% endif %}
-    <br><br>
-    <button onclick="hi('{{ question.answers }}')">print that list i guess</button><br>
+    {% for question in questions %}
+        Question {{loop.index}}: {{question.text}}<br>
+        The topic is {{topics[question.topic - 1]}}<br>
+        The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
+        The image for this question is:
+        {% if question.image != 1 %}
+        (raiden's cool face)<br>
+        <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+        {% else %}
+         nothing.
+        {% endif %}
+        <br><br>
+        <button onclick="hi('{{ question.answers }}')">print that list i guess</button><br>
+    
+        <br>
+    {% endfor %}
+</body>
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</html>
 
-    <br>
-{% endfor %}
+
+
