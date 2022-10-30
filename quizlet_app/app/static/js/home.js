@@ -2,18 +2,17 @@
 
 /**
  * Creates a randomised background image
- * TODO: Make it fit to screen (!!)
  * TODO: Add more images (!)
  */
-var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.png'];
-    $('body').css({
-        'background-image': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ')',
-        'background-size': 'cover',
-        'background-repeat': 'no-repeat',
-        'webkit-background-size': 'cover',
-        'moz-background-size': 'cover',
-        'o-background-size': 'cover',
-    });
+ var images = ['bg-1.png', 'bg-2.png', 'bg-3.png', 'bg-4.png', 'bg-5.png', 'bg-6.png'];
+ $('body').css({
+     'background': 'url(' + '../static/images/' + images[Math.floor(Math.random() * images.length)] + ') no-repeat center center fixed',
+     // 'background-size': 'auto',
+     // // 'background-repeat': 'no-repeat',
+     // 'webkit-background-size': 'auto',
+     // 'moz-background-size': 'auto',
+     // 'o-background-size': 'auto',
+ });
 
 /**
  * Creates the drop down menu

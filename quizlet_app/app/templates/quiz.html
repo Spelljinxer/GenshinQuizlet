@@ -11,24 +11,33 @@
         <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
     </head>
 <body>
-    im gonna mess with the html here lol<br><br>
+    <div class="nav-bar">
+        <div class="icon">
+            <a href="{{ url_for('index') }}">
+                <img class="paimon" src="{{ url_for('static', filename='assets/paimon-icon.png') }}" alt="icon">
+            </a>
+        </div>
+    </div>
 
-    {% for question in questions %}
-        Question {{loop.index}}: {{question.text}}<br>
-        The topic is {{topics[question.topic - 1]}}<br>
+    <div class="question-block">
+        {% for question in questions %}
+        <span class="question-num">Question {{loop.index}}: {{question.text}}<br></span>
+        <span class="question-topic">The topic is {{topics[question.topic - 1]}}<br></span>
         The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
         The image for this question is:
         {% if question.image != 1 %}
         (raiden's cool face)<br>
-        <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+        <div class="question-img">
+            <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+        </div>
         {% else %}
          nothing.
         {% endif %}
         <br><br>
         <button onclick="hi('{{ question.answers }}')">print that list i guess</button><br>
-    
         <br>
     {% endfor %}
+    </div>
 </body>
 <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
 </html>
