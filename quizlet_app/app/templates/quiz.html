@@ -18,9 +18,9 @@
             </a>
         </div>
     </div>
-    im gonna mess with the html here lol<br><br>
 
-    {% for question in questions %}
+    <div class="question-block">
+        {% for question in questions %}
         Question {{loop.index}}: {{question.text}}<br>
         The topic is {{topics[question.topic - 1]}}<br>
         The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
@@ -33,9 +33,9 @@
         {% endif %}
         <br><br>
         <button onclick="hi('{{ question.answers }}')">print that list i guess</button><br>
-    
         <br>
     {% endfor %}
+    </div>
 </body>
 <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
 </html>
