@@ -11,6 +11,13 @@
         <script src="https://kit.fontawesome.com/f4e6cce133.js" crossorigin="anonymous"></script>
     </head>
 <body>
+    <div class="nav-bar">
+        <div class="icon">
+            <a href="{{ url_for('index') }}">
+                <img class="paimon" src="{{ url_for('static', filename='assets/paimon-icon.png') }}" alt="icon">
+            </a>
+        </div>
+    </div>
     im gonna mess with the html here lol<br><br>
 
     {% for question in questions %}
