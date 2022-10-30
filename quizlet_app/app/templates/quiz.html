@@ -21,13 +21,15 @@
 
     <div class="question-block">
         {% for question in questions %}
-        Question {{loop.index}}: {{question.text}}<br>
-        The topic is {{topics[question.topic - 1]}}<br>
+        <span class="question-num">Question {{loop.index}}: {{question.text}}<br></span>
+        <span class="question-topic">The topic is {{topics[question.topic - 1]}}<br></span>
         The potential answers are: {{question.answers}} but this is stored in a JSON array.<br><br>
         The image for this question is:
         {% if question.image != 1 %}
         (raiden's cool face)<br>
-        <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+        <div class="question-img">
+            <img src="{{url_for('static', filename='img/' + images[loop.index0])}}">
+        </div>
         {% else %}
          nothing.
         {% endif %}
