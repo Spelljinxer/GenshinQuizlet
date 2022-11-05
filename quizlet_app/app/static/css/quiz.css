@@ -77,6 +77,13 @@ html,body{
     margin-top: 5%;
 }
 
+@media screen and (max-width: 768px){
+    .title-block{
+        margin-top: 30%;
+    }
+}
+    
+
 /* ---------- Question-block -----------  */
 .question-block{
     display: flex;
