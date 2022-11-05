@@ -11,8 +11,10 @@
     --main-font-family: 'Montserrat', sans-serif;
 }
 html,body{
-    height: 100%;
+    height: auto;
     font-family: var(--main-font-family);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* ---------- PAIMON ICON -----------  */
