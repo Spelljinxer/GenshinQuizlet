@@ -68,20 +68,20 @@ html,body{
 	}
 }
 
-/* ---------- Title-block -----------  */
-
-
-/* ---------- Question-block -----------  */
-.question-block{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+/* ---------- title-block -----------  */
+.title-block{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    margin-top: 5%;
+}
+
+/* ---------- Question-block -----------  */
+.question-block{
+    display: flex;
     flex-direction: column;
-    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
 }
