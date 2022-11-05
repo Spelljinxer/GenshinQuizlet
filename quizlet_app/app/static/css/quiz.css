@@ -11,8 +11,10 @@
     --main-font-family: 'Montserrat', sans-serif;
 }
 html,body{
-    height: 100%;
+    height: auto;
     font-family: var(--main-font-family);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* ---------- PAIMON ICON -----------  */
@@ -64,4 +66,29 @@ html,body{
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 		transform: translatey(0px);
 	}
+}
+
+/* ---------- title-block -----------  */
+.title-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 768px){
+    .title-block{
+        margin-top: 30%;
+    }
+}
+    
+
+/* ---------- Question-block -----------  */
+.question-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
 }
